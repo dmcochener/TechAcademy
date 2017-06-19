@@ -70,31 +70,45 @@ def format_size(self, size):
 
 def Select(tree):
     selection = tree.selection()
-    print (selection)
     path = []
     for i in selection:
         item = tree.item(i)
-        print (item)
         value = item['values'][0]
-        print(value)
         path.append(value)
     return path
     
 def copy_file(self, treea, treeb):
     srcf = Select(treea)
     desf = Select(treeb)[0]
-    for i in srcf:
-        shutil.copy(i,desf)
-        print("The file {} \nwas copied to {}.".format(i,desf))
+    if os.path.isdir(srcf[0]):
+            dirpath = srcf[0]
+            children = os.listdir(dirpath)
+            for child in children:
+                chpath = os.path.join(dirpath, child).replace('\\','/')
+                shutil.copy(chpath,desf)
+            print("The files {}\nwere copied from\n{} to\n{}.".format(children,dirpath,desf))
+    else:
+        for i in srcf:
+            shutil.copy(i,desf)
+            print("The file {} \nwas copied to {}.".format(i,desf))
     refresh(self,treea,treeb)
     
 def move_file(self, treea, treeb):
     srcf = Select(treea)
     desf = Select(treeb)[0]
     try:
-        for i in srcf:
-            shutil.move(i,desf)
-            print("The file {} \nwas moved to {}.".format(i,desf))
+        if os.path.isdir(srcf[0]):
+            dirpath = srcf[0]
+            children = os.listdir(dirpath)
+            for child in children:
+                chpath = os.path.join(dirpath, child).replace('\\','/')
+                shutil.move(chpath,desf)
+            print("The files {}\nwere moved from\n{} to\n{}.".format(children,dirpath,desf))
+
+        else:
+            for i in srcf:
+                shutil.move(i,desf)
+                print("The file {} \nwas moved to {}.".format(i,desf))
     except:
         messagebox.showerror("Cannot overwrite!",
                              "There was an error in trying to move one or more files.\nCannot replace existing files.")
