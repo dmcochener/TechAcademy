@@ -60,8 +60,7 @@ def Select(tree):
     selection = tree.selection()
     item = tree.item(selection)
     path = item['values'][0]
-    print(path)
-    return path
+    return path,selection[0]
 
 ##Function to check files in a folder and see if they've been
 ##modified in the last 24 hours
@@ -95,16 +94,19 @@ def move_dest(recmod,dest):
     messagebox.showinfo("Transfer Complete","{} files copied into the destination folder".format(count))
     
 def copy_files(self, treea, treeb):
-    srcd = Select(treea)
-    dest = Select(treeb)
+    srcd,sid = Select(treea)
+    dest,did = Select(treeb)
     try:
-        clear_dest(dest)
-        recmod = check_mod(srcd)
-        if recmod == []:
-            messagebox.showinfo("No Files", "No files have been modified.")
+        if (sid == parent) | (did == parent):
+            messagebox.showerror("Selection Error","Parent Folder Cannot be Used\nfor Source or Destination.")
         else:
-            move_dest(recmod,dest)
-            refresh(self,treea,treeb)
+            clear_dest(dest)
+            recmod = check_mod(srcd)
+            if recmod == []:
+                messagebox.showinfo("No Files", "No files have been modified.")
+            else:
+                move_dest(recmod,dest)
+                refresh(self,treea,treeb)
     except:
         messagebox.showerror("Error.","Something went wrong, exiting program.")
         self.master.destroy()
