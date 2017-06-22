@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<title>Best NY Pizza | NY Style Pizza Ordering</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<!-- My CSS -->
+	<link rel="stylesheet" href="./css/pizza.css">
+	
+  </head>
+  
+  <body>
+
+	<header>
+	<!-- Title and Navigation -->
+		<div class="jumbotron jumbotron-fluid text-center bg-danger text-white">
+			<div class="container">
+				<h2 class="display-3 font-weight-bold">Welcome to Best NY Pizza!</h2>
+				<p class="lead">Please use the form below to place your order. Then just pick up and enjoy your hot, fresh, NY style pizza!</p>
+			</div>
+		</div>
+	</header>
+	
+	<!-- Holder for entire form -->
+	<div class="container main" >
+		<!-- Ordering sheet -->
+		<div class="container flex-container spacing">
+			<!-- Holder for order options -->
+			<div class="card-deck">
+				<div class="row">
+					<!-- Pizza size -->
+					<!-- insert radio button sizes Personal, Medium, Large, and Extra Large -->
+					<div class="col-sm-4">
+						<div class="card h-100" id="choose-size">
+							<div class="card-block">
+								<h3 class="card-title text-center">Choose Size</h3>
+								<p class="card-text selector">
+									<form action="">
+									  <input type="radio" name="size" value="personal"> Personal ($ 6)<br>
+									  <input type="radio" name="size" value="medium"> Medium ($ 10)<br>
+									  <input type="radio" name="size" value="large"> Large ($ 14)<br>
+									  <input type="radio" name="size" value="xlarge"> Extra Large ($ 16)
+									</form>
+								</p>
+							</div>
+							<div class="card-footer text-center">
+								<button class="btn btn-warning" onclick="getSize()">Add to Order</button>
+							</div>
+						</div>	
+					</div>
+					<!-- Crust Selection -->
+					<!-- insert radio button cust options Plain Crust, Garlic Butter Crust, Cheese Stuffed Crust, Spicy Crust, and House Special Crust -->
+					<div class="col-sm-4">
+						<div class="card h-100" id="choose-crust">
+							<div class="card-block">
+								<h3 class="card-title text-center">Choose Crust</h3>
+								<p class="card-text selector">
+									<form action="">
+									  <input type="radio" name="crust" value="plain" checked> Plain Crust<br>
+									  <input type="radio" name="crust" value="garlic"> Garlic Butter Crust<br>
+									  <input type="radio" name="crust" value="stuffed"> Cheese Stuffed Crust (add $3)<br>
+									  <input type="radio" name="crust" value="spicy"> Spicy Crust<br>
+									  <input type="radio" name="crust" value="house"> House Special Crust
+									</form>
+								</p>
+							</div>
+							<div class="card-footer text-center">
+								<button onclick="getCrust()" class="btn btn-warning">Add to Order</button>
+							</div>
+						</div>	
+					</div>		
+					<!-- Sauce Selection -->
+					<!-- insert radio buttons sauce options Marinara sauce, White sauce, Barbeque sauce, and No Sauce -->
+					<div class="col-sm-4">
+						<div class="card h-100" id-"choose-sauce">
+							<div class="card-block">
+								<h3 class="card-title text-center">Choose Sauce</h3>
+								<p class="card-text selector">
+									<form action="">
+									  <input type="radio" name="sauce" value="marinara" checked> Marinara Sauce<br>
+									  <input type="radio" name="sauce" value="white"> White Sauce<br>
+									  <input type="radio" name="sauce" value="barbeque"> Barbecue Sauce<br>
+									  <input type="radio" name="sauce" value="none"> No Sauce
+									</form>
+								</p>
+							</div>
+							<div class="card-footer text-center">
+								<button onclick="getSauce()" class="btn btn-warning">Add to Order</button>
+							</div>
+						</div>	
+					</div>
+					<!-- Meats  Selection -->
+					<!-- insert check box buttons meats Pepperoni, Sausage, Canadian Bacon, Ground Beef, Anchovy, and Chicken -->
+					<div class="col-sm-4">
+						<div class="card h-100" id="choose-meat">
+							<div class="card-block">
+								<h3 class="card-title text-center">Meat Options</h3>
+								<h6 class="text-center">Two or more, add $1 each</h6>
+								<p class="card-text selector">
+									<form action="">
+									  <input type="checkbox" name="meat" value="pepperoni"> Pepperoni<br>
+									  <input type="checkbox" name="meat" value="sausage"> Sausage<br>
+									  <input type="checkbox" name="meat" value="cbacon"> Canadian Bacon<br>
+									  <input type="checkbox" name="meat" value="gbeef"> Ground Beef<br>
+									  <input type="checkbox" name="meat" value="anchovy"> Anchovy<br>
+									  <input type="checkbox" name="meat" value="chicken"> Chicken
+									</form>
+								</p>
+							</div>
+							<div class="card-footer text-center">
+								<button onclick="getMeat()" class="btn btn-warning">Add to Order</button>
+							</div>
+						</div>	
+					</div>	
+					<!-- Cheese Options -->
+					<!-- insert radio button cheese options Regular, No cheese, Extra Cheese -->
+					<div class="col-sm-4">
+						<div class="card h-100" id="choose-cheese">
+							<div class="card-block">
+								<h3 class="card-title text-center">Cheese Options</h3>
+								<p class="card-text selector">
+									<form action="">
+									  <input type="radio" name="cheese" value="regular" checked> Regular Cheese<br>
+									  <input type="radio" name="cheese" value="none"> No Cheese<br>
+									  <input type="radio" name="cheese" value="extra"> Extra Cheese (add $3)
+									</form>
+								</p>
+							</div>
+							<div class="card-footer text-center">
+								<button onclick="getCheese()" class="btn btn-warning">Add to Order</button>
+							</div>
+						</div>	
+					</div>		
+					<!-- Vegetables Selections -->
+					<!-- insert check boxes for vegetable options Tomatoes, Onions, Olives, Green Peppers, Mushrooms, Pineapple, Spinach, and Jalapeno -->
+					<div class="col-sm-4">
+						<div class="card h-100" id="choose-veggie">
+							<div class="card-block">
+								<h3 class="card-title text-center">Vegetable Options</h3>
+								<h6 class="text-center">Two or more, add $1 each</h6>
+								<p class="card-text selector">
+									<form action="">
+									  <input type="checkbox" name="veggie" value="tomatoes"> Tomatoes<br>
+									  <input type="checkbox" name="veggie" value="onions"> Onions<br>
+									  <input type="checkbox" name="veggie" value="olives"> Olives<br>
+									  <input type="checkbox" name="veggie" value="peppers"> Green Peppers<br>
+									  <input type="checkbox" name="veggie" value="mushrooms"> Mushrooms<br>
+									  <input type="checkbox" name="veggie" value="pineapple"> Pineapple<br>
+									  <input type="checkbox" name="veggie" value="spinach"> Spinach<br>
+									  <input type="checkbox" name="veggie" value="jalapeno"> Jalapeno
+									</form>
+								</p>
+							</div>
+							<div class="card-footer text-center">
+								<button onclick="getVeggie()" class="btn btn-warning">Add to Order</button>
+							</div>
+						</div>	
+					</div>	
+				</div>
+			</div>
+			<div class="text-center spacing">
+			<button onclick="getAll()" class="btn btn-warning">Add All to Order</button>
+			</div>
+		</div>
+		
+		<!-- Final Order Receipt -->
+		<div class="receipt">
+			<!-- insert table for running total -->
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Selection</th>
+						<th>Cost</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="receipt-size">Please select a size</td>
+						<td class="receipt-size">$ 0.00</td>
+					</tr>
+					<tr>
+						<td class="receipt-crust">Please select a crust</td>
+						<td class="receipt-crust">$ 0.00</td>
+					</tr>
+					<tr>
+						<td class="receipt-sauce">Please select a sauce</td>
+						<td class="receipt-sauce">$ 0.00 </td>
+					</tr>
+					<tr>
+						<td class="receipt-meat">No meats selected</td>
+						<td class="receipt-meat">$ 0.00</td>
+					</tr>
+					<tr>
+						<td class="receipt-cheese">Please select cheese option</td>
+						<td class="receipt-cheese">$ 0.00</td>
+					</tr>
+					<tr>
+						<td class="receipt-veggie">No vegetables selected</td>
+						<td class="receipt-veggie">$ 0.00</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th scope="row">Total:</th>
+						<td id="receipt-total">$ 0.00</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+		
+		<!-- Submit Order Buttons -->
+		<div class="text-center spacing">
+			<!-- insert buttons for Submit and Cancel/Reset -->
+			<input class="text" value="Customer Name" id="CustomerName">
+			<input class="btn btn-danger btn-lg" type="submit" value="Submit" data-toggle="modal" data-target="#orderModal" onclick="getPizza()">
+			<input class="btn btn-danger btn-lg" type="reset" value="Reset" onclick="window.open(document.URL,'_self');">	
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="modalTitle">Dear Customer</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				<p id="modalMessage"></p>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+	</div>
+	
+  
+  <footer>
+		<div class="jumbotron jumbotron-fluid text-center bg-danger text-white">
+			<div class="container">
+				<h4 class="display-5">Thank you for choosing Best NY Pizza!</h4>
+				<p class="lead">If you had a good experience, please leave us a review on Yelp!</p>
+			</div>
+		</div>
+  
+  </footer>
+  <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="./js/pizza.js"></script>
+	
+  </body>
+</html>

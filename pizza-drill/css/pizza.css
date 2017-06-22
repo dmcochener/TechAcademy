@@ -1,0 +1,17 @@
+.main{
+	background-image: url(../img/pizza.jpg);
+}
+
+.selector {
+	text-align: left;
+	margin-left: 10px;
+}
+
+.receipt {
+	background-color: #FFF;
+	margin-top: 20px;
+}
+
+.spacing {
+	padding: 20px 0 20px 0;
+}
