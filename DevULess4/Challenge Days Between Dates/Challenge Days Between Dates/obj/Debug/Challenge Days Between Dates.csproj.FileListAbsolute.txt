@@ -1,0 +1,34 @@
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\csc.exe
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\csc.exe.config
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\csc.rsp
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\csi.exe
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\csi.rsp
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\System.AppContext.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\vbc.exe
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\vbc.exe.config
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\vbc.rsp
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\VBCSCompiler.exe
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\Challenge Days Between Dates.dll.config
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\Challenge Days Between Dates.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\Challenge Days Between Dates.pdb
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\obj\Debug\Challenge Days Between Dates.csprojResolveAssemblyReference.cache
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\obj\Debug\Challenge Days Between Dates.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess4\Challenge Days Between Dates\Challenge Days Between Dates\obj\Debug\Challenge Days Between Dates.pdb
