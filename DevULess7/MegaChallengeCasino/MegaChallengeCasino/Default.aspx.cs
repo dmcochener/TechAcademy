@@ -55,8 +55,8 @@ namespace MegaChallengeCasino
 
         private string randomImage(out int imageNumber)
         {
-            string[] imagesArray = new string[12] { "Bar.png", "Bell.png", "Cherry.png", "Clover.png", "Diamond.png", "Horseshoe.png", "Lemon.png", "Orange.png", "Plum.png", "Seven.png", "Strawberry.png", "Watermelon.png" };
-            imageNumber = random.Next(1, 12);
+            string[] imagesArray = new string[12] {"Bar.png", "Bell.png", "Cherry.png", "Clover.png", "Diamond.png", "Horseshoe.png", "Lemon.png", "Orange.png", "Plum.png", "Seven.png", "Strawberry.png", "Watermelon.png" };
+            imageNumber = random.Next(0, 12);
             string randomImage = imagesArray[imageNumber];
             return randomImage;
         }
@@ -110,9 +110,9 @@ namespace MegaChallengeCasino
 
         private double updatePlayerAccount(int resultMultiplier, double playerBid)
         {
-            double playerMoney = (double)ViewState["Player Money"];
+            double playerMoney = (double)ViewState["Player Money"] - playerBid;
             double playerWin = playerBid * resultMultiplier;
-            playerMoney += playerWin;
+            if (playerWin > 0) playerMoney += playerWin;
             ViewState["Player Money"] = playerMoney;
             return playerWin;
         }
