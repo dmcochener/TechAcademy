@@ -26,9 +26,11 @@ namespace MegaChallengeCasino
 
         protected void leverButton_Click(object sender, EventArgs e)
         {
-            //verify bid amount
+            //verify bid amount and player has money
             double playerBid = 0.0;
             if (!validBid(out playerBid)) return;
+            double playerMoney = (double)ViewState["Player Money"];
+            if (playerBid > playerMoney) return;
             //get new images
             int[] imageNumberArray = setImages();
             //determine results
@@ -66,7 +68,10 @@ namespace MegaChallengeCasino
                 return false;
             else if (!double.TryParse(betAmountTextBox.Text, out playerBid))
                 return false;
-            else return true;
+            else if (playerBid == 0.0)
+                return false;
+            else
+                return true;
         }
 
         private int[] getResults(int[] imageNumberArray)
