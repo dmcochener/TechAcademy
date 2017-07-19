@@ -1,0 +1,6 @@
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess11\ChallengeStudentCourses\ChallengeStudentCourses\bin\ChallengeStudentCourses.dll.config
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess11\ChallengeStudentCourses\ChallengeStudentCourses\bin\ChallengeStudentCourses.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess11\ChallengeStudentCourses\ChallengeStudentCourses\bin\ChallengeStudentCourses.pdb
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess11\ChallengeStudentCourses\ChallengeStudentCourses\obj\Debug\ChallengeStudentCourses.csprojResolveAssemblyReference.cache
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess11\ChallengeStudentCourses\ChallengeStudentCourses\obj\Debug\ChallengeStudentCourses.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess11\ChallengeStudentCourses\ChallengeStudentCourses\obj\Debug\ChallengeStudentCourses.pdb
