@@ -18,6 +18,13 @@ namespace ChallengeStudentCourses
             Name = _name;
         }
 
+        public Student(int _studentId, string _name, List<Course> _courses)
+        {
+            StudentId = _studentId;
+            Name = _name;
+            Courses = _courses;
+        }
+
         public Student(int _studentId, string _name, List<Grade> _grades)
         {
             StudentId = _studentId;

@@ -27,28 +27,14 @@ namespace ChallengeStudentCourses
              */
 
             string result = "";
-            //Create students
-            Student firstStudent = new Student(329, "Barbara Kingsolver");
-            Student secondStudent = new Student(923, "James Patterson");
-            Student thirdStudent = new Student(273, "Sarah Vaughn");
-            Student fourthStudent = new Student(692, "George Orwell");
-            Student fifthStudent = new Student(451, "Ray Bradbury");
-            Student sixthStudent = new Student(842, "Margaret Atwood");
-
-            List<Student> classOneStudents = new List<Student>()
-            { firstStudent, secondStudent};
-
-            List<Student> classTwoStudents = new List<Student>()
-            { thirdStudent, fourthStudent};
-
-            List<Student> classThreeStudents = new List<Student>()
-            { fifthStudent, sixthStudent};
 
             List<Course> courses = new List<Course>()
-            { new Course{CourseId = 221, Name = "Creative Writing: Mysteries", Students = classOneStudents},
-              new Course{CourseId = 301, Name = "History of Warfare", Students = classTwoStudents},
-              new Course{CourseId = 130, Name = "Writing for Distopian Future", Students = classThreeStudents}
-            };
+            { new Course(221, "Creative Writing: Mysteries",
+                new List<Student>(){ new Student(329, "Barbara Kingsolver"), new Student(923, "James Patterson") }),
+              new Course(301,"History of Warfare",
+                 new List<Student>() { new Student(273, "Sarah Vaughn"), new Student(692, "George Orwell") }),
+              new Course(130,  "Writing for Distopian Future",
+                  new List<Student>(){ new Student(451, "Ray Bradbury"), new Student(842, "Margaret Atwood") })};
 
             foreach (Course course in courses)
             {
@@ -73,20 +59,13 @@ namespace ChallengeStudentCourses
 
             string result = "";
 
-            Student studentOne = new Student(88, "Jack Ripper");
-            Student studentTwo = new Student(98, "Green River");
-            Student studentThree = new Student(87, "Brother Bishop");
+            Student studentOne = new Student(88, "Jack Ripper", new List<Course>()
+            { new Course (101, "Intro to Philosophy" ), new Course (315, "Human Anatomy" ) });
+            Student studentTwo = new Student(98, "Green River", new List<Course>()
+            { new Course (111, "Budgets and Planning" ), new Course ( 212, "Nautical Knot Making" )});
+            Student studentThree = new Student(87, "Brother Bishop", new List<Course>()
+            { new Course (301, "Criminal Prosecution"), new Course (219, "Religious Studies") });
 
-            Course courseOne = new Course { CourseId = 101, Name = "Intro to Philosophy" };
-            Course courseTwo = new Course { CourseId = 111, Name = "Budgets and Planning" };
-            Course courseThree = new Course { CourseId = 212, Name = "Nautical Knot Making" };
-            Course courseFour = new Course { CourseId = 301, Name = "Criminal Prosecution" };
-            Course courseFive = new Course { CourseId = 315, Name = "Human Anatomy" };
-            Course courseSix = new Course { CourseId = 219, Name = "Religious Studies" };
-
-            studentOne.Courses = new List<Course> { courseOne, courseFive };
-            studentTwo.Courses = new List<Course> { courseTwo, courseThree };
-            studentThree.Courses = new List<Course> { courseFour, courseSix };
 
             Dictionary<int, Student> students = new Dictionary<int, Student>()
             {
@@ -119,22 +98,19 @@ namespace ChallengeStudentCourses
             string result = "";
 
             Dictionary<int, Course> moreCourses = new Dictionary<int, Course>()
-            { {55, new Course {CourseId = 55, Name = "BeBop and Rythym"} },
-              {34, new Course{CourseId = 34, Name = "Folk Music Instruments"} },
-              {88, new Course{CourseId = 88, Name = "Synthesizer and Electronic Music"} },
-              {69, new Course{CourseId = 69, Name = "From Poodle Skirts to Mini Skirts"} }
-            };
+            { {55, new Course (55, "BeBop and Rythym") },
+              {34, new Course (34, "Folk Music Instruments") },
+              {88, new Course(88, "Synthesizer and Electronic Music")},
+              {69, new Course(69, "From Poodle Skirts to Mini Skirts")}};
 
-            List<Grade> gradeJanis = new List<Grade>()
-            {new Grade {courseNumber = 34, courseGrade = 89}, new Grade {courseNumber = 69, courseGrade = 78} };
-            List<Grade> gradeBowie = new List<Grade>()
-            { new Grade {courseNumber = 88, courseGrade = 97}, new Grade{courseNumber = 69, courseGrade = 77}};
-            List<Grade> gradeMonk = new List<Grade>()
-            { new Grade {courseNumber = 55, courseGrade = 93}, new Grade {courseNumber = 34, courseGrade = 72 }};
 
             List<Student> moreStudents = new List<Student>()
-            { new Student (27, "Janis Joplin", gradeJanis) , new Student(70, "David Bowie", gradeBowie),
-            new Student (64, "Thelonius Monk", gradeMonk)};
+            { new Student (27, "Janis Joplin", new List<Grade>()
+            {new Grade {courseNumber = 34, courseGrade = 89}, new Grade {courseNumber = 69, courseGrade = 78} }) ,
+                new Student(70, "David Bowie", new List<Grade>()
+            { new Grade {courseNumber = 88, courseGrade = 97}, new Grade{courseNumber = 69, courseGrade = 77}}),
+            new Student (64, "Thelonius Monk", new List<Grade>()
+            { new Grade {courseNumber = 55, courseGrade = 93}, new Grade {courseNumber = 34, courseGrade = 72 }})};
 
             foreach (var student in moreStudents)
             {
