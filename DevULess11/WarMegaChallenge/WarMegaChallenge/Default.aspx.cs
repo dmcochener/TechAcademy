@@ -18,7 +18,7 @@ namespace WarMegaChallenge
         {
             //Initialize Deck 
 
-            List<Card> basicCards = new List<Card>()
+            /*List<Card> basicCards = new List<Card>()
             { new Card(2,"Hearts"), new Card(3, "Hearts"), new Card(4, "Hearts"), new Card(5, "Hearts"), new Card(6, "Hearts"),
                 new Card(7,"Hearts"), new Card(8,"Hearts"), new Card(9,"Hearts"),new Card(10,"Hearts"),
                 new Card(11,"Hearts"), new Card(12,"Hearts"), new Card(13,"Hearts"), new Card(14,"Hearts"),
@@ -31,21 +31,21 @@ namespace WarMegaChallenge
                 new Card(2,"Spades"), new Card(3, "Spades"), new Card(4, "Spades"), new Card(5, "Spades"), new Card(6, "Spades"),
                 new Card(7,"Spades"), new Card(8,"Spades"), new Card(9,"Spades"),new Card(10,"Spades"),
                 new Card(11,"Spades"), new Card(12,"Spades"), new Card(13,"Spades"), new Card(14,"Spades"),
-            };
+            };*/
 
-            Deck dealerDeck = new Deck(new Player("Dealer"), basicCards);
+            Deck dealerDeck = new Deck();
             Deck player1Deck = new Deck(new Player("Player 1"));
             Deck player2Deck = new Deck(new Player("Player 2"));
 
             //Divide up deck
             Deal(dealerDeck, player1Deck, player2Deck);
 
-            //Play round
+            //Play game
             Game game = new Game();
             game.MatchUp(player1Deck, player2Deck);
             resultLabel.Text += game.result;
 
-            //Display results
+     
         }
 
         public void Deal(Deck _start, Deck _first, Deck _second)

@@ -21,5 +21,24 @@ namespace WarMegaChallenge
             Owner = _owner;
             Cards = _cards;
         }
+
+
+        public Deck ()
+        {
+            string[] _suits = new string[] { "Hearts", "Clubs", "Diamonds", "Spades" };
+            List<Card> _cards = new List<Card>();
+
+            foreach (var suit in _suits)
+            {
+                for (int i = 2; i < 15; i++)
+                {
+                    _cards.Add(new Card(i, suit));
+                }
+            }
+
+            Owner = new Player("Dealer");
+            Cards = _cards;
+
+        }
     }
 }

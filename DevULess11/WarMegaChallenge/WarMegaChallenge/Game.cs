@@ -10,6 +10,7 @@ namespace WarMegaChallenge
         Random draw = new Random();
         public string result = "";
 
+
         public void MatchUp(Deck _player1, Deck _player2)
         {
             int round = 1;
