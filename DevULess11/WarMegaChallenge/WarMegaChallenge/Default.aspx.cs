@@ -16,6 +16,7 @@ namespace WarMegaChallenge
 
         protected void warButton_Click(object sender, EventArgs e)
         {
+            resultLabel.Text = "";
             //Initialize Deck 
 
             /*List<Card> basicCards = new List<Card>()

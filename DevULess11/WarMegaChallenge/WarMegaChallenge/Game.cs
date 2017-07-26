@@ -57,6 +57,15 @@ namespace WarMegaChallenge
 
             result += String.Format("<br /><br />{0} has {1} cards <br />{2} has {3} cards <br />", _player1Win.Owner.Name, _player1Win.Cards.Count,
                 _player2Win.Owner.Name, _player2Win.Cards.Count);
+            Player Winner = DetermineWinner(_player1Win, _player2Win);
+            if (Winner != null)
+            {
+                result += String.Format("The winner of the war is {0}!", Winner.Name);
+            }
+            else
+            {
+                result += "There is no winner. The war is a stalemate!";
+            }
 
         }
 
@@ -72,7 +81,7 @@ namespace WarMegaChallenge
         private void GetResults(Card player1Draw, Card player2Draw, Deck _player1Win, Deck _player2Win, List<Card> bounty)
         {
 
-           if (player1Draw.Value > player2Draw.Value)
+            if (player1Draw.Value > player2Draw.Value)
             {
                 AddBounty(_player1Win, bounty);
                 result += String.Format("{0} Wins!", _player1Win.Owner.Name);
@@ -157,6 +166,16 @@ namespace WarMegaChallenge
 
             return new List<Card>()
             { card1, card2, card3};
+        }
+
+        private Player DetermineWinner(Deck _player1, Deck _player2)
+        {
+            if (_player1.Cards.Count > _player2.Cards.Count)
+                return _player1.Owner;
+            if (_player1.Cards.Count < _player2.Cards.Count)
+                return _player2.Owner;
+            else
+                return null;
         }
     }
 
