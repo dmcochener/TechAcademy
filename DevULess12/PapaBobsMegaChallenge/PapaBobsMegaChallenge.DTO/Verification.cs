@@ -8,10 +8,10 @@ using PapaBobsMegaChallenge.DTO;
 namespace PapaBobsMegaChallenge.DTO
 
 {
-    public class Verification
+    public static class Verification
     {
 
-        public bool VerifyData(string _dataEntry, out string _dataFormatted)
+        public static bool VerifyData(string _dataEntry, out string _dataFormatted)
         {
             if (_dataEntry.Trim().Length == 0)
             {
@@ -26,7 +26,7 @@ namespace PapaBobsMegaChallenge.DTO
 
         }
 
-        public bool VerifyData(int _dataEntry, out int _dataFormatted)
+        public static bool VerifyData(int _dataEntry, out int _dataFormatted)
         {
             if (_dataEntry == 0)
             {
@@ -41,7 +41,7 @@ namespace PapaBobsMegaChallenge.DTO
 
         }
 
-        public bool VerifyCrust(string _crustEntry,  out PizzaProperties.CrustType _crust)
+        public static bool VerifyCrust(string _crustEntry,  out PizzaProperties.CrustType _crust)
         {
             PizzaProperties.CrustType _crustData;
             if (Enum.TryParse(_crustEntry, out _crustData))
@@ -57,7 +57,7 @@ namespace PapaBobsMegaChallenge.DTO
 
         }
 
-        public bool VerifySize(string _sizeEntry, out PizzaProperties.PieSize _size)
+        public static bool VerifySize(string _sizeEntry, out PizzaProperties.PieSize _size)
         {
             PizzaProperties.PieSize _sizeData;
             if (Enum.TryParse(_sizeEntry, out _sizeData))
@@ -73,7 +73,7 @@ namespace PapaBobsMegaChallenge.DTO
 
         }
 
-        public bool VerifyTopping(string _toppingEntry, out PizzaProperties.Topping _topping)
+        public static bool VerifyTopping(string _toppingEntry, out PizzaProperties.Topping _topping)
         {
             PizzaProperties.Topping _toppingData;
             if (Enum.TryParse(_toppingEntry, out _toppingData))

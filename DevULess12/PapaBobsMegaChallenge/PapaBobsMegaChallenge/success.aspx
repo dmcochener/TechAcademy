@@ -10,6 +10,9 @@
     <form id="form1" runat="server">
         <div>
             <h2>Success!</h2>
+            <p>
+                <asp:Label ID="testLabel" runat="server"></asp:Label>
+            </p>
         </div>
     </form>
 </body>

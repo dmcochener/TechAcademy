@@ -52,7 +52,7 @@
             <p><asp:RadioButton ID="cashRadioButton" runat="server" GroupName="paymentRadioGroup" Text="Cash" ViewStateMode="Enabled" /><br />
             <asp:RadioButton ID="creditRadioButton" runat="server" GroupName="paymentRadioGroup" Text="Credit" ViewStateMode="Enabled" /></p>
             <p>
-                <asp:Button ID="Button1" runat="server" Text="Button" /><br />
+                <asp:Button ID="orderButton" runat="server" Text="Order!" OnClick="orderButton_Click" /><br />
                 <asp:Label ID="errorLabel" runat="server"></asp:Label>
             </p>
             <h2>Total Cost:<br />

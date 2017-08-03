@@ -17,36 +17,54 @@ namespace PapaBobsMegaChallenge.DTO
         public int zipEntered;
         public string phoneEntered;
 
-        /*public Order CreateOrder(out Customer currentCustomer)
+
+        public Customer GetCustomer()
+        {
+            Customer _customer = new Customer();
+            string _verifiedName;
+            string _verifiedAddress;
+            int _verifiedZip;
+            string _verifiedPhone;
+
+
+            if (Verification.VerifyData(nameEntered, out _verifiedName))
+                _customer.Name = _verifiedName;
+            else
+                throw new Exception();
+            if (Verification.VerifyData(addressEntered, out _verifiedAddress))
+                _customer.Address = _verifiedAddress;
+            else
+                throw new Exception();
+            if (Verification.VerifyData(zipEntered, out _verifiedZip))
+                _customer.Zip = _verifiedZip;
+            else
+                throw new Exception();
+            if (Verification.VerifyData(phoneEntered, out _verifiedPhone))
+                _customer.Phone = _verifiedPhone;
+            else
+                throw new Exception();
+
+            return _customer;
+        }
+
+        public Order CreateOrder(Pizza PizzaOrder, Customer CustomerInfo)
         {
             Order currentOrder = new Order();
-            currentCustomer = new Customer();
-            FormData currentForm = new FormData();
-            if (toppingsSelected != null)
-            {
-                currentOrder = currentForm.getOrder(sizeSelected, crustSelected, toppingsSelected);
-            }
-            else
-            {
-                currentOrder = currentForm.getOrder(sizeSelected, crustSelected);
-            }
             currentOrder.OrderId = new Guid();
-            
-            currentCustomer = currentForm.getCustomer(nameEntered, addressEntered, zipEntered, phoneEntered);
-            currentOrder.OrderedBy = currentCustomer;
+            currentOrder.PizzaOrdered = PizzaOrder;
+            currentOrder.OrderedBy = CustomerInfo;
 
             return currentOrder;
-        }*/
+        }
 
         public Pizza BuildPizza()
         {
             Pizza currentPizza = new Pizza(); 
-            Verification verifyPizza = new Verification();
 
-            if (verifyPizza.VerifySize(sizeSelected, out PizzaProperties.PieSize _size))
+            if (Verification.VerifySize(sizeSelected, out PizzaProperties.PieSize _size))
                 currentPizza.Size = _size;
 
-            if (verifyPizza.VerifyCrust(crustSelected, out PizzaProperties.CrustType _crust))
+            if (Verification.VerifyCrust(crustSelected, out PizzaProperties.CrustType _crust))
                 currentPizza.Crust = _crust;
 
             if (toppingsSelected != null)
@@ -54,7 +72,7 @@ namespace PapaBobsMegaChallenge.DTO
                 currentPizza.Toppings = new List<PizzaProperties.Topping>();
                 foreach (var topping in toppingsSelected)
                 {
-                    if (verifyPizza.VerifyTopping(topping, out PizzaProperties.Topping _topping))
+                    if (Verification.VerifyTopping(topping, out PizzaProperties.Topping _topping))
                         currentPizza.Toppings.Add(_topping);
                 }
             }

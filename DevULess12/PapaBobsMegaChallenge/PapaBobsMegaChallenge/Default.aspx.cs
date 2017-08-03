@@ -36,21 +36,23 @@ namespace PapaBobsMegaChallenge
             Ordering();
         }
 
-
-        /*public void GetUserInfo(GetInput _inputData)
+        protected void orderButton_Click(object sender, EventArgs e)
         {
-            sizeDropDownList.SelectedValue = _inputData.sizeSelected;
-            crustDropDownList.SelectedValue = _inputData.crustSelected;
-            string newTopping = toppingsCheckBoxList.SelectedValue;
-            if (newTopping != "")
-            {
-              _inputData.toppingsSelected.Add(newTopping);
-            }
-            //_inputData.nameEntered = nameTextBox.Text;
-            //_inputData.addressEntered = addressTextBox.Text;
-            //_inputData.zipEntered = int.Parse(zipTextBox.Text);
-            //_inputData.phoneEntered = phoneTextBox.Text;
-        }*/
+            GetOrderInProcess();
+            Pizza OrderedPizza = InputData.BuildPizza();
+            GetUserInfo();
+            Customer CustomerInfo = InputData.GetCustomer();
+            Order CurrentOrder = InputData.CreateOrder(OrderedPizza, CustomerInfo);
+
+        }
+
+        public void GetUserInfo()
+        {
+            InputData.nameEntered = nameTextBox.Text;
+            InputData.addressEntered = addressTextBox.Text;
+            InputData.zipEntered = int.Parse(zipTextBox.Text);
+            InputData.phoneEntered = phoneTextBox.Text;
+        }
 
         public void GetOrderInProcess()
         {
@@ -75,7 +77,6 @@ namespace PapaBobsMegaChallenge
             CurrentCost.FindCost(currentPizza);
             costLabel.Text = String.Format("{0:C}", CurrentCost.totalCost);
         }
-
 
     }
 }
