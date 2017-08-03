@@ -1,0 +1,6 @@
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess12\PapaBobsMegaChallenge\PapaBobsMegaChallenge.DTO\bin\Debug\PapaBobsMegaChallenge.DTO.dll.config
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess12\PapaBobsMegaChallenge\PapaBobsMegaChallenge.DTO\bin\Debug\PapaBobsMegaChallenge.DTO.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess12\PapaBobsMegaChallenge\PapaBobsMegaChallenge.DTO\bin\Debug\PapaBobsMegaChallenge.DTO.pdb
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess12\PapaBobsMegaChallenge\PapaBobsMegaChallenge.DTO\obj\Debug\PapaBobsMegaChallenge.DTO.csprojResolveAssemblyReference.cache
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess12\PapaBobsMegaChallenge\PapaBobsMegaChallenge.DTO\obj\Debug\PapaBobsMegaChallenge.DTO.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess12\PapaBobsMegaChallenge\PapaBobsMegaChallenge.DTO\obj\Debug\PapaBobsMegaChallenge.DTO.pdb
