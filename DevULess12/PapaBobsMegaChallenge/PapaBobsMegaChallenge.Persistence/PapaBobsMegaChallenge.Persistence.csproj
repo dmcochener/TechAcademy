@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{72CFF627-F639-45B7-AEAE-F24A780C6141}</ProjectGuid>
+    <ProjectGuid>{72F4CCA0-297F-4EC4-8A1B-4B5AABD03B57}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>PapaBobsMegaChallenge.Persistence</RootNamespace>
     <AssemblyName>PapaBobsMegaChallenge.Persistence</AssemblyName>
@@ -51,25 +51,46 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="PizzaOrders.edmx">
+    <EntityDeploy Include="PizzaOrderModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PizzaOrders.Designer.cs</LastGenOutput>
+      <LastGenOutput>PizzaOrderModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="PizzaOrders.edmx.diagram">
-      <DependentUpon>PizzaOrders.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
+    <None Include="PizzaOrderModel.edmx.diagram">
+      <DependentUpon>PizzaOrderModel.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model1.Context.tt">
+    <Compile Include="Order.cs">
+      <DependentUpon>PizzaOrderModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderCapture.cs" />
+    <Compile Include="PizzaOrderModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PizzaOrderModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PizzaOrderModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PizzaOrderModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PizzaOrderModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PizzaOrderModel.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PizzaOrderModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>PizzaOrders.edmx</DependentUpon>
+      <LastGenOutput>PizzaOrderModel.Context.cs</LastGenOutput>
+      <DependentUpon>PizzaOrderModel.edmx</DependentUpon>
     </Content>
-    <Content Include="Model1.tt">
+    <Content Include="PizzaOrderModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PizzaOrders.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>PizzaOrderModel.edmx</DependentUpon>
+      <LastGenOutput>PizzaOrderModel.cs</LastGenOutput>
     </Content>
     <Content Include="PizzaOrders.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -78,23 +99,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>PizzaOrders.mdf</DependentUpon>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PizzaOrders.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PizzaOrders.edmx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -112,6 +116,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PapaBobsMegaChallenge.DTO\PapaBobsMegaChallenge.DTO.csproj">
+      <Project>{62855f29-5b39-4087-bc6c-1eeeef16344e}</Project>
+      <Name>PapaBobsMegaChallenge.DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

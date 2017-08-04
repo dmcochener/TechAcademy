@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using PapaBobsMegaChallenge.DTO;
 using PapaBobsMegaChallenge.Domain;
+using PapaBobsMegaChallenge.Persistence;
 
 namespace PapaBobsMegaChallenge
 {
@@ -42,7 +43,24 @@ namespace PapaBobsMegaChallenge
             Pizza OrderedPizza = InputData.BuildPizza();
             GetUserInfo();
             Customer CustomerInfo = InputData.GetCustomer();
-            Order CurrentOrder = InputData.CreateOrder(OrderedPizza, CustomerInfo);
+            string Payment = GetPaymentInfo();
+            NewOrder CurrentOrder = InputData.CreateOrder(OrderedPizza, CustomerInfo, Payment);
+            OrderCapture.AddOrder(CurrentOrder);
+            Server.Transfer("success.aspx");
+
+        }
+
+        private string GetPaymentInfo()
+        {
+            string payment;
+            if (cashRadioButton.Checked)
+                payment = "Cash";
+            else if (creditRadioButton.Checked)
+                payment = "Credit";
+            else
+                throw new Exception();
+
+            return payment;
 
         }
 
@@ -77,6 +95,8 @@ namespace PapaBobsMegaChallenge
             CurrentCost.FindCost(currentPizza);
             costLabel.Text = String.Format("{0:C}", CurrentCost.totalCost);
         }
+
+
 
     }
 }

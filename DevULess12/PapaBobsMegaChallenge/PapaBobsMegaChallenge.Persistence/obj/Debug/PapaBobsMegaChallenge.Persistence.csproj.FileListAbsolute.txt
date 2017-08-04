@@ -5,6 +5,9 @@ C:\Users\Student\Documents\GitHub\TechAcademy\DevULess12\PapaBobsMegaChallenge\P
 C:\Users\Student\Documents\GitHub\TechAcademy\DevULess12\PapaBobsMegaChallenge\PapaBobsMegaChallenge.Persistence\bin\Debug\PapaBobsMegaChallenge.Persistence.pdb
 C:\Users\Student\Documents\GitHub\TechAcademy\DevULess12\PapaBobsMegaChallenge\PapaBobsMegaChallenge.Persistence\bin\Debug\EntityFramework.dll
 C:\Users\Student\Documents\GitHub\TechAcademy\DevULess12\PapaBobsMegaChallenge\PapaBobsMegaChallenge.Persistence\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess12\PapaBobsMegaChallenge\PapaBobsMegaChallenge.Persistence\bin\Debug\PapaBobsMegaChallenge.DTO.dll
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess12\PapaBobsMegaChallenge\PapaBobsMegaChallenge.Persistence\bin\Debug\PapaBobsMegaChallenge.DTO.pdb
+C:\Users\Student\Documents\GitHub\TechAcademy\DevULess12\PapaBobsMegaChallenge\PapaBobsMegaChallenge.Persistence\bin\Debug\PapaBobsMegaChallenge.DTO.dll.config
 C:\Users\Student\Documents\GitHub\TechAcademy\DevULess12\PapaBobsMegaChallenge\PapaBobsMegaChallenge.Persistence\bin\Debug\EntityFramework.xml
 C:\Users\Student\Documents\GitHub\TechAcademy\DevULess12\PapaBobsMegaChallenge\PapaBobsMegaChallenge.Persistence\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Student\Documents\GitHub\TechAcademy\DevULess12\PapaBobsMegaChallenge\PapaBobsMegaChallenge.Persistence\obj\Debug\PapaBobsMegaChallenge.Persistence.csprojResolveAssemblyReference.cache

@@ -41,7 +41,7 @@
   <ItemGroup>
     <Compile Include="Customer.cs" />
     <Compile Include="GetInput.cs" />
-    <Compile Include="Order.cs" />
+    <Compile Include="NewOrder.cs" />
     <Compile Include="Pizza.cs" />
     <Compile Include="PizzaProperties.cs" />
     <Compile Include="Verification.cs" />

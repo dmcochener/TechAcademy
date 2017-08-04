@@ -47,12 +47,13 @@ namespace PapaBobsMegaChallenge.DTO
             return _customer;
         }
 
-        public Order CreateOrder(Pizza PizzaOrder, Customer CustomerInfo)
+        public NewOrder CreateOrder(Pizza PizzaOrder, Customer CustomerInfo, string Payment)
         {
-            Order currentOrder = new Order();
-            currentOrder.OrderId = new Guid();
+            NewOrder currentOrder = new NewOrder();
+            currentOrder.OrderId = Guid.NewGuid();
             currentOrder.PizzaOrdered = PizzaOrder;
             currentOrder.OrderedBy = CustomerInfo;
+            currentOrder.Payment = Payment;
 
             return currentOrder;
         }
