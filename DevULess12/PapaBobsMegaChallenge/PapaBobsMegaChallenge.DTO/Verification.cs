@@ -26,17 +26,17 @@ namespace PapaBobsMegaChallenge.DTO
 
         }
 
-        public static bool VerifyData(int _dataEntry, out int _dataFormatted)
+        public static bool VerifyZip(string _zipEntry, out int _zipFormatted)
         {
-            if (_dataEntry == 0)
+            _zipFormatted = 0;
+            try
             {
-                _dataFormatted = 0;
-                return false;
-            }
-            else
-            {
-                _dataFormatted = _dataEntry;
+                _zipFormatted = int.Parse(_zipEntry);
                 return true;
+            }
+            catch (Exception)
+            {
+                return false;
             }
 
         }

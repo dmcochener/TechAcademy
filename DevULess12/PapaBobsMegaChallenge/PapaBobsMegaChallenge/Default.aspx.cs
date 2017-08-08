@@ -16,37 +16,29 @@ namespace PapaBobsMegaChallenge
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-        }
-
-        protected void sizeDropDownList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            Ordering();
-            
-        }
-
-        protected void crustDropDownList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Ordering();
-        }
-
-
-        protected void toppingsCheckBoxList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Ordering();
+            var ex = Server.GetLastError(); 
+            if (ex != null)
+                errorLabel.Text = ex.InnerException.Message;
         }
 
         protected void orderButton_Click(object sender, EventArgs e)
         {
-            GetOrderInProcess();
-            Pizza OrderedPizza = InputData.BuildPizza();
-            GetUserInfo();
-            Customer CustomerInfo = InputData.GetCustomer();
-            string Payment = GetPaymentInfo();
-            NewOrder CurrentOrder = InputData.CreateOrder(OrderedPizza, CustomerInfo, Payment);
-            OrderCapture.AddOrder(CurrentOrder);
-            Server.Transfer("success.aspx");
+            try
+            { 
+                GetOrderInProcess();
+                Pizza OrderedPizza = InputData.BuildPizza();
+                GetUserInfo();
+                Customer CustomerInfo = InputData.GetCustomer();
+                string Payment = GetPaymentInfo();
+                NewOrder CurrentOrder = InputData.CreateOrder(OrderedPizza, CustomerInfo, Payment);
+                OrderProcess.AddOrder(CurrentOrder);
+                Server.Transfer("success.aspx");
+            }
+
+            catch (Exception ex)
+            {
+                errorLabel.Text = ex.Message;
+            }
 
         }
 
@@ -58,7 +50,7 @@ namespace PapaBobsMegaChallenge
             else if (creditRadioButton.Checked)
                 payment = "Credit";
             else
-                throw new Exception();
+                throw new Exception("Please select a method of payment");
 
             return payment;
 
@@ -68,7 +60,7 @@ namespace PapaBobsMegaChallenge
         {
             InputData.nameEntered = nameTextBox.Text;
             InputData.addressEntered = addressTextBox.Text;
-            InputData.zipEntered = int.Parse(zipTextBox.Text);
+            InputData.zipEntered = zipTextBox.Text;
             InputData.phoneEntered = phoneTextBox.Text;
         }
 
@@ -87,16 +79,23 @@ namespace PapaBobsMegaChallenge
 
         }
 
-        private void Ordering()
+        protected void Ordering(object sender, EventArgs e)
         {
-            GetOrderInProcess();
-            Pizza currentPizza = InputData.BuildPizza();
-            GetCost CurrentCost = new GetCost();
-            CurrentCost.FindCost(currentPizza);
-            costLabel.Text = String.Format("{0:C}", CurrentCost.totalCost);
+            if ((sizeDropDownList.SelectedValue != "") && (crustDropDownList.SelectedValue != ""))
+            {
+                GetOrderInProcess();
+                Pizza currentPizza = InputData.BuildPizza();
+                GetCost CurrentCost = new GetCost();
+                CurrentCost.FindCost(currentPizza);
+                costLabel.Text = String.Format("{0:C}", CurrentCost.totalCost);
+            }
         }
 
-
+        public void DisplayError(string _message)
+        {
+            errorLabel.Text = _message;
+           
+        }
 
     }
 }

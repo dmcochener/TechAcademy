@@ -12,23 +12,23 @@
             <h2>Papa Bob's Pizza</h2>
             <h4>Pizza to Code By</h4>
             <p>Size: <br />
-                <asp:DropDownList ID="sizeDropDownList" runat="server" OnSelectedIndexChanged="sizeDropDownList_SelectedIndexChanged" OnTextChanged="sizeDropDownList_SelectedIndexChanged" AutoPostBack="True">
-                    <asp:ListItem>Select One...</asp:ListItem>
+                <asp:DropDownList ID="sizeDropDownList" runat="server" OnSelectedIndexChanged="Ordering" AutoPostBack="True">
+                    <asp:ListItem Value ="">Select One...</asp:ListItem>
                     <asp:ListItem Value="Small">Small (12 inch - $12)</asp:ListItem>
                     <asp:ListItem Value="Medium">Medium (14 inch - $14)</asp:ListItem>
                     <asp:ListItem Value="Large">Large (16 inch - $16)</asp:ListItem>
                 </asp:DropDownList>
             </p>
             <p>Crust: <br />
-                <asp:DropDownList ID="crustDropDownList" runat="server" OnSelectedIndexChanged="crustDropDownList_SelectedIndexChanged" AutoPostBack="True" OnTextChanged="crustDropDownList_SelectedIndexChanged">
-                    <asp:ListItem>Select One...</asp:ListItem>
+                <asp:DropDownList ID="crustDropDownList" runat="server" OnSelectedIndexChanged="Ordering" AutoPostBack="True" >
+                    <asp:ListItem Value="">Select One...</asp:ListItem>
                     <asp:ListItem Value="Regular"></asp:ListItem>
                     <asp:ListItem Value="Thin"></asp:ListItem>
                     <asp:ListItem Value="Thick">Thick (+$2)</asp:ListItem>
                 </asp:DropDownList>
             </p>
             <p>
-                <asp:CheckBoxList ID="toppingsCheckBoxList" runat="server" OnSelectedIndexChanged="toppingsCheckBoxList_SelectedIndexChanged" ViewStateMode="Enabled" AutoPostBack="True">
+                <asp:CheckBoxList ID="toppingsCheckBoxList" runat="server" OnSelectedIndexChanged="Ordering" ViewStateMode="Enabled" AutoPostBack="True">
                     <asp:ListItem Value="Sausage">Sausage</asp:ListItem>
                     <asp:ListItem Value="Pepperoni">Pepperoni</asp:ListItem>
                     <asp:ListItem Value="Onions">Onions</asp:ListItem>

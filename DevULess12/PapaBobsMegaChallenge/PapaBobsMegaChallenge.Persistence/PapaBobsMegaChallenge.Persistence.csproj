@@ -64,7 +64,7 @@
     <Compile Include="Order.cs">
       <DependentUpon>PizzaOrderModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="OrderCapture.cs" />
+    <Compile Include="OrderProcess.cs" />
     <Compile Include="PizzaOrderModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
