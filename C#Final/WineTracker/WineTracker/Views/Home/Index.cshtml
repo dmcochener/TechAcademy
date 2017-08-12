@@ -1,0 +1,62 @@
+﻿@model IEnumerable<WineTracker.Models.Wine>
+
+@{
+    ViewBag.Title = "Deanna's Wine Collection App";
+}
+
+<h2>Wine Collection</h2>
+<p>
+    @Html.ActionLink("Add Wine to Inventory", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.WineName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Winery)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grape)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.WineName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Winery)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grape)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.WineId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.WineId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.WineId })
+        </td>
+    </tr>
+}
+
+</table>
