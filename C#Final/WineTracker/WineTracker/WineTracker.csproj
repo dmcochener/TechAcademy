@@ -115,6 +115,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708142315315_InitialCreate.cs" />
+    <Compile Include="Migrations\201708142315315_InitialCreate.Designer.cs">
+      <DependentUpon>201708142315315_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708142338454_Initial.cs" />
+    <Compile Include="Migrations\201708142338454_Initial.Designer.cs">
+      <DependentUpon>201708142338454_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708142354401_Location.cs" />
+    <Compile Include="Migrations\201708142354401_Location.Designer.cs">
+      <DependentUpon>201708142354401_Location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Wine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -139,7 +152,17 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201708142315315_InitialCreate.resx">
+      <DependentUpon>201708142315315_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708142338454_Initial.resx">
+      <DependentUpon>201708142338454_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708142354401_Location.resx">
+      <DependentUpon>201708142354401_Location.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

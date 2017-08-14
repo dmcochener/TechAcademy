@@ -27,7 +27,7 @@ namespace WineTracker.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "WineName, Winery,Type, Year, Grape, Quantity")] Wine wine)
+        public ActionResult Create([Bind(Include = "WineName, Winery,Type, Year, Grape, Quantity, Location")] Wine wine)
         {
             if (ModelState.IsValid)
             {           
@@ -55,7 +55,7 @@ namespace WineTracker.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "WineId, WineName, Winery, Type, Year, Grape, Quantity")] Wine wine)
+        public ActionResult Edit([Bind(Include = "WineId, WineName, Winery, Type, Year, Grape, Quantity, Location")] Wine wine)
         {
             if (ModelState.IsValid)
             {

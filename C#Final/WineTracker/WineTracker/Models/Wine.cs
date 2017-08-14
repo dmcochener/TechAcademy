@@ -19,6 +19,7 @@ namespace WineTracker.Models
         public int Year { get; set; }
         public string Grape { get; set; }
         public int Quantity { get; set; }
+        public string Location { get; set; }
 
         public enum WineType
         {
